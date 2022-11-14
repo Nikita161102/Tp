@@ -1,0 +1,15 @@
+1)download docker desktop:-https://desktop.docker.com/win/main/amd64/Docker%20Desktop%20Installer.exe?utm_source=docker&utm_medium=webreferral&utm_campaign=dd-smartbutton&utm_location=module
+2)installation:-https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+3)open cmd:
+		docker --version
+		docker images 		
+4)create docker folder
+		create app.js 
+			console.log("msg");
+		create Dockerfile
+			FROM node:alpine
+			COPY . /docker
+			CMD node docker/app.js
+5)run command 
+		docker build -t imagename .
+		docker run imagename
